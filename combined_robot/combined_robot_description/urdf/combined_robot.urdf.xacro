@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="combined_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Include chassis -->
+  <xacro:include filename="$(find combined_robot_description)/urdf/ackermann.urdf.xacro"/>
+
+  <!-- Include robot arm -->
+  <xacro:include filename="$(find combined_robot_description)/urdf/arm5dof_armbase.urdf"/>
+
+  <!-- Mount arm to chassis -->
+  <joint name="arm_mount_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="arm_base_link"/>
+    <origin xyz="0.081 0.003 0.088" rpy="0 0 0"/>
+  </joint>
+
+</robot>

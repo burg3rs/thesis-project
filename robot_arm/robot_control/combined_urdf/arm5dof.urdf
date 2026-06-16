@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="arm5dof">
+  <link
+    name="arm_base_link">
+    <inertial>
+      <origin
+        xyz="-0.05549 -1.2443E-05 0.014047"
+        rpy="0 0 0" />
+      <mass
+        value="0.34831" />
+      <inertia
+        ixx="0.00037734"
+        ixy="-1.9667E-07"
+        ixz="-5.7059E-07"
+        iyy="0.0011827"
+        iyz="9.3336E-14"
+        izz="0.0015361" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="black">
+        <color
+          rgba="0.3 0.3 0.3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="-0.0098047 1.4097E-06 0.014583"
+        rpy="0 0 0" />
+      <mass
+        value="0.047857" />
+      <inertia
+        ixx="9.9743E-06"
+        ixy="1.2606E-09"
+        ixz="5.9862E-07"
+        iyy="8.9062E-06"
+        iyz="2.193E-09"
+        izz="1.4861E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0.6 0.6 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_0"
+    type="revolute">
+    <origin
+      xyz="0 0 0.052"
+      rpy="0 0 0" />
+    <parent
+      link="arm_base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="20"
+      velocity="3.5" />
+  </joint>
+    <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.04 -5.5511E-17 6.7485E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.020202" />
+      <inertia
+        ixx="9.9386E-06"
+        ixy="1.7219E-08"
+        ixz="-5.3147E-21"
+        iyy="1.3724E-05"
+        iyz="-1.594E-21"
+        izz="5.1826E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0 0.6 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.018"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1"
+      rpy = "0 0 0" />
+    <limit
+      lower="-2.3562"
+      upper="-0.2269"
+      effort="20"
+      velocity="3.5" />
+  </joint>
+
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.019908 0 -6.1294E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.050927" />
+      <inertia
+        ixx="1.2573E-05"
+        ixy="8.6095E-09"
+        ixz="-1.9789E-09"
+        iyy="1.7838E-05"
+        iyz="3.1614E-20"
+        izz="8.6328E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="gray">
+        <color
+          rgba="0.6 0.6 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.08 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.7854"
+      upper="1.5708"
+      effort="20"
+      velocity="3.5" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.042216 0.0041806 -3.2915E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.094835" />
+      <inertia
+        ixx="2.4341E-05"
+        ixy="-2.5244E-06"
+        ixz="-1.9789E-09"
+        iyy="3.3312E-05"
+        iyz="1.4436E-20"
+        izz="3.0737E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0 0.6 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0.07615 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 0 1"
+      rpy = "0 0 0" />
+    <limit
+      lower="-1.5708"
+      upper="2.26893"
+      effort="20"
+      velocity="3.5" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="-8.2184E-06 -0.0011968 0.01386"
+        rpy="0 0 0" />
+      <mass
+        value="0.049124" />
+      <inertia
+        ixx="8.2684E-06"
+        ixy="2.2759E-09"
+        ixz="5.1987E-11"
+        iyy="1.1645E-05"
+        iyz="5.9116E-07"
+        izz="1.5458E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="gray">
+        <color
+          rgba="0.6 0.6 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+<joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.0854 0 0"
+      rpy="-1.57079632679489 8.79419361882729E-05 -1.5707963267949" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="20"
+      velocity="3.5" />
+  </joint>
+  <link
+    name="left_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.035118 0.00016366 5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.024589" />
+      <inertia
+        ixx="1.611E-06"
+        ixy="2.5381E-07"
+        ixz="1.1103E-20"
+        iyy="1.2951E-05"
+        iyz="-2.2806E-22"
+        izz="1.2364E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/left_gripper_link.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0 0.6 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/left_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_gripper_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.00965 0.016"
+      rpy="8.7942E-05 -1.5708 0" />
+    <parent
+      link="link5" />
+    <child
+      link="left_gripper_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.5708"
+      effort="20"
+      velocity="3.5" />
+  </joint>
+  <link
+    name="left_rubber_pad_link">
+    <inertial>
+      <origin
+        xyz="-5.5511E-17 0.0005 0"
+        rpy="0 0 0" />
+      <mass
+        value="8.5E-05" />
+      <inertia
+        ixx="2.0542E-09"
+        ixy="-5.8301E-25"
+        ixz="-4.0091E-24"
+        iyy="2.2242E-09"
+        iyz="2.0909E-27"
+        izz="1.8417E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/left_rubber_pad_link.STL" />
+      </geometry>
+      <material
+        name="rubber">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/left_rubber_pad_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rubber_pad_joint"
+    type="fixed">
+    <origin
+      xyz="0.0810000000000007 -0.0109999999999981 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_gripper_link" />
+    <child
+      link="left_rubber_pad_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.036355 -0.00017366 -4.996E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.023734" />
+      <inertia
+        ixx="1.5331E-06"
+        ixy="-2.5364E-07"
+        ixz="-1.9986E-21"
+        iyy="1.2074E-05"
+        iyz="7.3824E-23"
+        izz="1.1549E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/right_gripper_link.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0 0.6 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/right_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_gripper_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0123499997975674 0.016"
+      rpy="8.79419382699738E-05 -1.5707963267949 0" />
+    <parent
+      link="link5" />
+    <child
+      link="right_gripper_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="0"
+      effort="20"
+      velocity="3.5" />
+    <mimic
+      joint="left_gripper_joint"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  <link
+    name="right_rubber_pad_link">
+    <inertial>
+      <origin
+        xyz="3.3307E-16 -0.0005 -2.6507E-15"
+        rpy="0 0 0" />
+      <mass
+        value="8.5E-05" />
+      <inertia
+        ixx="2.0542E-09"
+        ixy="-8.9622E-25"
+        ixz="1.5346E-24"
+        iyy="2.2242E-09"
+        iyz="3.0737E-27"
+        izz="1.8417E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/right_rubber_pad_link.STL" />
+      </geometry>
+      <material
+        name="rubber">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/right_rubber_pad_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rubber_pad_joint"
+    type="fixed">
+    <origin
+      xyz="0.081 0.011 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_gripper_link" />
+    <child
+      link="right_rubber_pad_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+        <!--0.012507582644275 0.000732174960914142 -0.0180019906281733-->
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.182214459073633" />
+      <inertia
+        ixx="3.36907557025265E-05"
+        ixy="5.37491052812001E-09"
+        ixz="-2.59991125882536E-08"
+        iyy="0.000396547856460873"
+        iyz="-6.17675676299939E-08"
+        izz="0.000390144942272885" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/camera_mount_mesh.stl" 
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_control/meshes/camera_mount_mesh.stl" 
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.0584 -0.0455 0.0001"
+      rpy="1.570796 0 0" />
+    <parent
+      link="link4" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ee_link">
+  </link>
+  <joint
+    name="ee_joint"
+    type="fixed">
+    <parent link= "link5"/>
+    <child link= "ee_link"/>
+    <origin xyz= "0.000 0 0.07" rpy="0 0 0"/>
+  </joint>  
+</robot>

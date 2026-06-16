@@ -1,0 +1,8 @@
+<library path="ackermann_arduino_hw">
+  <class
+    name="ackermann_chassis/ArduinoSerialHardware"
+    type="ackermann_chassis::ArduinoSerialHardware"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>Serial bridge to Arduino Mega + Hiwonder driver.</description>
+  </class>
+</library>

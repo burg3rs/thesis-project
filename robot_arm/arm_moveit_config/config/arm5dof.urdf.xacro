@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arm5dof">
+
+    <!-- Import arm5dof urdf file -->
+    <xacro:include filename="$(find robot_control)/urdf/arm5dof.urdf" />
+
+
+
+</robot>

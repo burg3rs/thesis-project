@@ -1,0 +1,135 @@
+format: "xrdf"
+
+format_version: 1.0
+
+default_joint_positions: 
+  joint_0: -0.0
+  joint_1: -0.2244
+  joint_2: 0.003
+  joint_3: 0.0008
+  joint_4: -0.0
+  left_gripper_joint: -0.0
+  right_gripper_joint: 0.0
+cspace: 
+  joint_names: 
+    - "joint_0"
+    - "joint_1"
+    - "joint_2"
+    - "joint_3"
+    - "joint_4"
+  acceleration_limits: [10, 10, 10, 10, 10]
+  jerk_limits: [10000, 10000, 10000, 10000, 10000]
+
+tool_frames: ["left_gripper_link"]
+
+collision: 
+  geometry: "auto_generated_collision_sphere_group"
+
+self_collision: 
+  geometry: "auto_generated_collision_sphere_group"
+  ignore: 
+    dummy_base: 
+      - "base_link"
+    base_link: 
+      - "link1"
+    link1: 
+      - "link2"
+    link2: 
+      - "link3"
+    link3: 
+      - "link4"
+    link4: 
+      - "camera"
+      - "link5"
+    link5: 
+      - "left_gripper_link"
+      - "right_gripper_link"
+    left_gripper_link: 
+      - "left_rubber_pad_link"
+      - "right_gripper_link"
+    right_gripper_link: 
+      - "right_rubber_pad_link"
+    camera: 
+      - "link5"
+
+geometry: 
+  auto_generated_collision_sphere_group: 
+    spheres: 
+      link1: 
+        - center: [-0.011, 0.006, 0.018]
+          radius: 0.0194
+        - center: [-0.002, -0.008, 0.018]
+          radius: 0.0194
+        - center: [-0.018, -0.007, 0.018]
+          radius: 0.0194
+        - center: [0.0, 0.008, 0.018]
+          radius: 0.0194
+      link3: 
+        - center: [0.016, 0.0, -0.003]
+          radius: 0.0196
+        - center: [0.004, 0.0, 0.008]
+          radius: 0.0196
+        - center: [0.002, -0.002, -0.011]
+          radius: 0.0179
+        - center: [0.018, -0.0, 0.006]
+          radius: 0.0196
+      camera: 
+        - center: [0.069, 0.0, -0.021]
+          radius: 0.0247
+        - center: [-0.014, 0.0, -0.017]
+          radius: 0.0247
+        - center: [0.033, 0.0, -0.021]
+          radius: 0.0247
+        - center: [-0.055, 0.0, -0.019]
+          radius: 0.0247
+        - center: [-0.04, 0.0, -0.017]
+          radius: 0.0247
+        - center: [0.014, -0.002, -0.02]
+          radius: 0.0227
+      link4: 
+        - center: [0.064, 0.018, 0.0]
+          radius: 0.0194
+        - center: [0.016, 0.0, -0.001]
+          radius: 0.0194
+        - center: [0.064, 0.001, 0.0]
+          radius: 0.0194
+        - center: [0.004, -0.0, 0.004]
+          radius: 0.0194
+        - center: [0.052, -0.002, 0.001]
+          radius: 0.0185
+        - center: [0.006, -0.0, -0.006]
+          radius: 0.0194
+      left_gripper_link: 
+        - center: [0.072, -0.0, 0.0]
+          radius: 0.012
+        - center: [0.033, -0.0, 0.0]
+          radius: 0.012
+        - center: [0.058, -0.0, 0.0]
+          radius: 0.012
+        - center: [0.044, -0.0, 0.0]
+          radius: 0.012
+      right_gripper_link: 
+        - center: [0.076, -0.001, -0.0]
+          radius: 0.012
+        - center: [0.035, -0.001, -0.0]
+          radius: 0.012
+        - center: [0.06, -0.001, -0.0]
+          radius: 0.012
+        - center: [0.044, -0.001, -0.0]
+          radius: 0.012
+      link2: 
+        - center: [0.038, 0.0, 0.017]
+          radius: 0.012
+        - center: [0.038, 0.0, -0.02]
+          radius: 0.012
+        - center: [0.038, 0.0, -0.002]
+          radius: 0.012
+      link5: 
+        - center: [0.014, 0.011, 0.016]
+          radius: 0.0146
+        - center: [0.014, -0.009, 0.016]
+          radius: 0.0146
+        - center: [-0.015, 0.013, 0.016]
+          radius: 0.0146
+        - center: [-0.016, -0.008, 0.016]
+          radius: 0.0146

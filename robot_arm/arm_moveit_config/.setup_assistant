@@ -1,0 +1,23 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: robot_control
+    relative_path: urdf/arm5dof.urdf
+  srdf:
+    relative_path: config/arm5dof.srdf
+  package_settings:
+    author_name: david
+    author_email: daburgess7@gmail.com
+    generated_timestamp: 1774251919
+  control_xacro:
+    command:
+      []
+    state:
+      []
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      []
+    state:
+      []

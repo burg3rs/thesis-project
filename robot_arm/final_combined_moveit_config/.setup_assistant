@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: robot_control
+    relative_path: combined_urdf/combined_robot.urdf.xacro
+  srdf:
+    relative_path: config/combined_robot.srdf
+  package_settings:
+    author_name: David Burgess
+    author_email: daburgess7@gmail.com
+    generated_timestamp: 1780458525

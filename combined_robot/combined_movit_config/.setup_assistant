@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: combined_robot_description
+    relative_path: urdf/combined_robot.urdf.xacro
+  srdf:
+    relative_path: config/combined_robot.srdf
+  package_settings:
+    author_name: David Burgess
+    author_email: daburgess7@gmail.com
+    generated_timestamp: 1779613689
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
